@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name : #ifndef XXX; #define XXX; #endif
+# key: once
+# --
+#ifndef $1`(upcase (file-name-nondirectory (file-name-sans-extension (or (buffer-file-name) (buffer-name)))))`_H
+#define $1`(upcase (file-name-nondirectory (file-name-sans-extension (or (buffer-file-name) (buffer-name)))))`_H
+
+
+$0
+
+
+#endif /* $1`(upcase (file-name-nondirectory (file-name-sans-extension (or (buffer-file-name) (buffer-name)))))`_H */

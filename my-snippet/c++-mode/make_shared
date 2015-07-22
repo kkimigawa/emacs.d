@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: make_shared
+# key: mksh
+# --
+make_shared<${1:Class}>($2)

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: namespace4
+# key: ns4
+# --
+namespace ${1:name} { namespace ${2:name} { namespace ${3:name} { namespace ${4:name} {
+    $0
+}}}}
