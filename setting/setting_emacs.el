@@ -29,6 +29,9 @@
 ;; ミニバッファを縦に広げない
 (setq-default resize-mini-windows nil)
 
+;; モードラインからモード名を削除
+(delete 'mode-line-modes mode-line-format)
+
 ;; カーソルのアンダーライン
 (require 'hl-line)
 (defun global-hl-line-timer-function ()
