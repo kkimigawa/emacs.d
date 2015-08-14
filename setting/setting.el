@@ -7,7 +7,6 @@
 
 (defvar installing-package-list
   '(
-    ace-jump-mode
     auto-complete
     flycheck
     helm
@@ -267,12 +266,6 @@
         :buffer "*helm eww*"))
 
 (define-key eww-mode-map (kbd "H") 'helm-eww-history)
-
-
-;; ace-jump-mode ---------------------------------------------------------------
-(require 'ace-jump-mode)
-
-(global-set-key (kbd "C-c a") 'ace-jump-word-mode)
 
 
 ;; flycheck --------------------------------------------------------------------
