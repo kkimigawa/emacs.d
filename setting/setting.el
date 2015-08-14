@@ -9,6 +9,7 @@
   '(
     ace-jump-mode
     auto-complete
+    flycheck
     helm
     helm-core
     helm-ls-git
@@ -272,3 +273,8 @@
 (require 'ace-jump-mode)
 
 (global-set-key (kbd "C-c a") 'ace-jump-word-mode)
+
+
+;; flycheck --------------------------------------------------------------------
+(add-hook 'c++-mode-hook 'flycheck-mode)
+(add-hook 'python-mode-hook 'flycheck-mod)
