@@ -40,6 +40,7 @@
 
 ;; C-x C-gでgrep-find
 (global-set-key (kbd "C-x C-g") 'grep-find)
+(global-set-key (kbd "C-x g") 'grep-find)
 
 
 ;; lua-mode --------------------------------------------------------------------
