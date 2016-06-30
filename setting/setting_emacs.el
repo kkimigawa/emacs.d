@@ -1,16 +1,8 @@
-;; 背景色と文字色
-(custom-set-faces
- '(default ((t
-             (:background "black" :foreground "white")
-             ))))
-
-;; カーソルの色(白)
-(set-cursor-color "white")
-(setq default-frame-alist
-      (append (list '(cursor-color . "white")) default-frame-alist))
+;; テーマ
+(load-theme 'wombat t)
 
 ;; C-c gで指定行ジャンプ
-(define-key mode-specific-map "g" 'goto-line)
+(define-key mode-specific-map "l" 'goto-line)
 
 ;; Home、EndをC-a、C-eと同じ動きにする
 (global-set-key [home] 'move-beginning-of-line)
@@ -22,6 +14,9 @@
 ;; メニューバーを消す
 (menu-bar-mode 0)
 
+;; ツールバーを消す
+(tool-bar-mode 0)
+
 ;; 行の表示
 (line-number-mode t)
 ;; 列の表示
@@ -31,16 +26,6 @@
 
 ;; モードラインからモード名を削除
 (delete 'mode-line-modes mode-line-format)
-
-;; カーソルのアンダーライン
-(require 'hl-line)
-(defun global-hl-line-timer-function ()
-  (global-hl-line-unhighlight-all)
-  (let ((global-hl-line-mode t))
-    (global-hl-line-highlight)))
-(setq global-hl-line-timer
-      (run-with-idle-timer 0.03 t 'global-hl-line-timer-function))
-(global-hl-line-mode t)
 
 ;; Tabをスペースに変える
 (setq-default indent-tabs-mode nil)
@@ -127,20 +112,20 @@
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
 
-;; dired ソート
-(setq dired-listing-switches "-laX")
+;; ;; dired ソート
+;; (setq dired-listing-switches "-laX")
 
-;; diredのバッファをひとつしか作らないようにする
-(defun dired-open-in-accordance-with-situation ()
-    (interactive)
-    (cond ((string-match "\\(?:\\.\\.?\\)"
-                         (format "%s" (thing-at-point 'filename)))
-           (dired-find-alternate-file))
-          ((file-directory-p (dired-get-filename))
-           (dired-find-alternate-file))
-          (t
-           (dired-find-file))))
-(define-key dired-mode-map (kbd "RET") 'dired-open-in-accordance-with-situation)
+;; ;; diredのバッファをひとつしか作らないようにする
+;; (defun dired-open-in-accordance-with-situation ()
+;;     (interactive)
+;;     (cond ((string-match "\\(?:\\.\\.?\\)"
+;;                          (format "%s" (thing-at-point 'filename)))
+;;            (dired-find-alternate-file))
+;;           ((file-directory-p (dired-get-filename))
+;;            (dired-find-alternate-file))
+;;           (t
+;;            (dired-find-file))))
+;; (define-key dired-mode-map (kbd "RET") 'dired-open-in-accordance-with-situation)
 
 ;; scratch 閉じないようにする
 (defun my-make-scratch (&optional arg)

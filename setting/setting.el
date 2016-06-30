@@ -8,16 +8,12 @@
 (defvar installing-package-list
   '(
     auto-complete
-    flycheck
     helm
     helm-core
     helm-ls-git
-    helm-projectile
     helm-swoop
     lua-mode
     magit
-    projectile
-    shell-pop
     web-mode
     wgrep
     yasnippet
@@ -32,15 +28,18 @@
       (package-install pkg))))
 
 
+;; magit -----------------------------------------------------------------------
+(require 'magit)
+(global-set-key (kbd "C-c g") 'magit-status)
+
+
 ;; wgrep -----------------------------------------------------------------------
 (require 'wgrep)
 
 ;; wgrep終了時にバッファを保存
 (setq wgrep-auto-save-buffer t)
 
-;; C-x C-gでgrep-find
-(global-set-key (kbd "C-x C-g") 'grep-find)
-(global-set-key (kbd "C-x g") 'grep-find)
+(global-set-key (kbd "C-c f") 'grep-find)
 
 
 ;; lua-mode --------------------------------------------------------------------
@@ -169,33 +168,6 @@
 (define-key ac-mode-map (kbd "TAB") 'my-auto-complete-key)
 
 
-;; projectile ------------------------------------------------------------------
-(require 'projectile)
-
-(setq projectile-enable-caching t)
-(setq projectile-globally-ignored-directories (append '(".*") projectile-globally-ignored-directories))
-(setq projectile-globally-ignored-files (append '("*.svn-base" "*.o" "*.pyc" "elc") projectile-globally-ignored-files))
-(setq projectile-use-native-indexing t)
-(projectile-global-mode)
-(setq projectile-completion-system 'helm)
-(helm-projectile-on)
-
-
-;; shell-pop -------------------------------------------------------------------
-(require 'shell-pop)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(shell-pop-shell-type (quote ("ansi-term" "*shell-pop-ansi-term*" (lambda nil (ansi-term shell-pop-term-shell)))))
- '(shell-pop-term-shell "/bin/bash")
- '(shell-pop-universal-key "C-t")
- '(shell-pop-window-height 30)
- '(shell-pop-window-position "bottom"))
-
-
 ;; eww -------------------------------------------------------------------------
 (require 'eww)
 (defvar eww-disable-colorize t)
@@ -267,8 +239,3 @@
         :buffer "*helm eww*"))
 
 (define-key eww-mode-map (kbd "H") 'helm-eww-history)
-
-
-;; flycheck --------------------------------------------------------------------
-(add-hook 'c++-mode-hook 'flycheck-mode)
-(add-hook 'python-mode-hook 'flycheck-mod)
