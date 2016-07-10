@@ -14,6 +14,7 @@
     helm-swoop
     lua-mode
     magit
+    markdown-mode
     web-mode
     wgrep
     yasnippet
