@@ -30,6 +30,10 @@
 ;; ミニバッファを縦に広げない
 (setq-default resize-mini-windows nil)
 
+;; M-n M-pでカーソル移動せずにスクロール
+(global-set-key "\M-n" (lambda () (interactive) (scroll-up 1)))
+(global-set-key "\M-p" (lambda () (interactive) (scroll-down 1)))
+
 ;; モードラインからモード名を削除
 (delete 'mode-line-modes mode-line-format)
 
