@@ -17,6 +17,9 @@
 ;; ツールバーを消す
 (tool-bar-mode 0)
 
+;; スクロールバーを非表示
+(scroll-bar-mode 0)
+
 ;; 行の表示
 (line-number-mode t)
 ;; 列の表示
