@@ -12,13 +12,11 @@
     helm-core
     helm-git-grep
     helm-ls-git
-    helm-projectile
     helm-swoop
     init-loader
     lua-mode
     magit
     markdown-mode
-    projectile
     web-mode
     wgrep
     yasnippet
