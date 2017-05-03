@@ -123,3 +123,6 @@
 ;; C-hで削除
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
+
+;; 縦に分割しないようにする
+(setq split-height-threshold nil)
