@@ -20,6 +20,7 @@
     markdown-mode
     web-mode
     wgrep
+    typescript-mode
     yasnippet
     ))
 
