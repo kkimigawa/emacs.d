@@ -15,6 +15,9 @@
 (define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
 
+;; C-kでバッファを消せるようにする
+(define-key helm-buffer-map (kbd "C-k") 'helm-buffer-run-kill-buffers)
+
 ;; helmのウインドウを今のウインドウの下に作成
 (defun helm-split-window (buf)
   (split-window)
