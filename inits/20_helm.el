@@ -31,8 +31,8 @@
 ;; helm-swoopを同じウインドウに表示する
 (setq helm-swoop-split-with-multiple-windows t)
 
-;; バッファ名が短くなるので50に指定
-(setq helm-buffer-max-length 50)
+;; helm-miniの詳細表示をせずにバッファー名のみの表示にする
+(setq helm-buffer-details-flag nil)
 
 ;; helm-miniが変な並び順になるのを防ぐ
 (defadvice helm-buffers-sort-transformer (around ignore activate)
