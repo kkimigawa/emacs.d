@@ -20,7 +20,7 @@
 (define-key helm-buffer-map (kbd "C-k") 'helm-buffer-run-kill-buffers)
 
 ;; helmのウインドウを今のウインドウの下に作成
-(defun helm-split-window (buf)
+(defun helm-split-window (buf options)
   (split-window)
   (other-window 1)
   (switch-to-buffer buf))
