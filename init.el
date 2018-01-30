@@ -21,6 +21,7 @@
     web-mode
     wgrep
     typescript-mode
+    yaml-mode
     yasnippet
     ))
 
