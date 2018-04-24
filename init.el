@@ -7,6 +7,7 @@
 (defvar installing-package-list
   '(
     auto-complete
+    dumb-jump
     git-gutter
     google-c-style
     helm
