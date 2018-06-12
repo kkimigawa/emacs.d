@@ -14,14 +14,16 @@
     helm-core
     helm-git-grep
     helm-ls-git
+    helm-rg
     helm-swoop
     init-loader
     lua-mode
     magit
     markdown-mode
+    rg
+    typescript-mode
     web-mode
     wgrep
-    typescript-mode
     yaml-mode
     yasnippet
     ))
