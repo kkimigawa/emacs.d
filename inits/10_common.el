@@ -94,27 +94,6 @@
 ;; yes or noを y or nに
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; 行末の空白を強調
-(setq-default show-trailing-whitespace t)
-(set-face-background 'trailing-whitespace "#b14770")
-
-(defun my/disable-trailing-mode-hook ()
-  "Disable show tail whitespace."
-  (setq show-trailing-whitespace nil))
-
-(defvar my/disable-trailing-modes
-  '(comint-mode
-    eshell-mode
-    eww-mode
-    term-mode
-    twittering-mode))
-
-(mapc
- (lambda (mode)
-   (add-hook (intern (concat (symbol-name mode) "-hook"))
-             'my/disable-trailing-mode-hook))
- my/disable-trailing-modes)
-
 ;; C-hで削除
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
