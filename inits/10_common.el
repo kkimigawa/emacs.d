@@ -100,3 +100,6 @@
 
 ;; 縦に分割しないようにする
 (setq split-height-threshold nil)
+
+;; vc-modeを無効にする
+(setq vc-handled-backends ())
