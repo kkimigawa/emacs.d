@@ -6,7 +6,8 @@
 
 (defvar installing-package-list
   '(
-    auto-complete
+    company
+    company-c-headers
     dumb-jump
     git-gutter
     google-c-style
