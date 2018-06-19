@@ -20,11 +20,6 @@
 ;; スクロールバーを非表示
 (scroll-bar-mode 0)
 
-;; 行をハイライト
-(global-hl-line-mode t)
-(set-face-background 'hl-line "darkslategray")
-(set-face-attribute hl-line-face nil :underline nil)
-
 ;; 行の表示
 (line-number-mode t)
 ;; 列の表示
