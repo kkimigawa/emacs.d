@@ -5,13 +5,17 @@
 (custom-set-variables
  '(company-idle-delay nil))
 
-(global-set-key (kbd "<C-tab>") 'company-complete)
-
-;; 各種メジャーモードでも C-M-iで company-modeの補完を使う
-(define-key emacs-lisp-mode-map (kbd "<C-tab>") 'company-complete)
-
 ;; C-n, C-pで補完候補を次/前の候補を選択
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 (define-key company-search-map (kbd "C-n") 'company-select-next)
 (define-key company-search-map (kbd "C-p") 'company-select-previous)
+
+;; 行頭の場合は通常のTAB処理
+;; 2文字目以降はcompany-completeで補完する
+(defun my-company-key ()
+  (interactive)
+  (if (equal (current-column) 0)
+      (indent-for-tab-command)
+    (company-complete)))
+(global-set-key (kbd "TAB") 'my-company-key)
