@@ -1,7 +1,7 @@
 ;; テーマ
 (load-theme 'wombat t)
 
-;; C-c gで指定行ジャンプ
+;; C-c lで指定行ジャンプ
 (define-key mode-specific-map "l" 'goto-line)
 
 ;; Home、EndをC-a、C-eと同じ動きにする
@@ -61,6 +61,7 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 (setq auto-save-list-file-prefix nil)
+(setq create-lockfiles nil)
 
 ;; 言語を日本語にする
 (set-language-environment 'Japanese)
