@@ -8,6 +8,7 @@
   '(
     company
     company-c-headers
+    dockerfile-mode
     dumb-jump
     git-gutter
     google-c-style
