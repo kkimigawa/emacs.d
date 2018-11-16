@@ -1,7 +1,16 @@
+(require 'magit)
+
 (global-set-key (kbd "C-x g") 'magit-status)
 
-;; diff内の変更点を色分けする
-(setq magit-diff-refine-hunk 'all)
+;; 変更点の表示を簡略化してパフォーマンスを上げる
+(setq magit-diff-highlight-indentation nil)
+(setq magit-diff-highlight-trailing nil)
+(setq magit-diff-paint-whitespace nil)
+(setq magit-diff-highlight-hunk-body nil)
+(setq magit-diff-refine-hunk nil)
+
+;; コミット時に変更点を表示しない(変更点が多いと重くなる)
+(remove-hook 'server-switch-hook 'magit-commit-diff)
 
 ;; 同じウインドウでmagitを開く
 (setq magit-display-buffer-function

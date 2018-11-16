@@ -124,4 +124,4 @@
 (setq split-height-threshold nil)
 
 ;; vc-modeを無効にする
-(setq vc-handled-backends ())
+(setq vc-handled-backends nil)
