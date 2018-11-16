@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: for
-# key: forb
-# --
-for (int32_t ${1:i} = 0; $1 < ${2:num}; ++$1) {
-    $0
-}

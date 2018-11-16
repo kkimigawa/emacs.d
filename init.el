@@ -26,7 +26,6 @@
     web-mode
     wgrep
     yaml-mode
-    yasnippet
     ))
 
 (let ((not-installed (loop for x in installing-package-list

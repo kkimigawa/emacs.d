@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: ifdef
-# key: ifdef
-# --
-#if defined($1)
-#endif /* $1 */
