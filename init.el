@@ -8,20 +8,18 @@
   '(
     company
     company-c-headers
+    counsel
     csharp-mode
     dockerfile-mode
     dumb-jump
     git-gutter
     google-c-style
-    helm
-    helm-core
-    helm-git-grep
-    helm-ls-git
-    helm-swoop
     init-loader
+    ivy
     lua-mode
     magit
     markdown-mode
+    swiper
     typescript-mode
     web-mode
     wgrep
