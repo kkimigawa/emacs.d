@@ -1,4 +1,10 @@
-# emacs用の設定ファイル
+Emacs用の設定ファイル
+===================
+
+## 動作確認バージョン
+
+Emacs 25.x
+Emacs 26.x
 
 ## init-loader
 
@@ -11,9 +17,3 @@
  Emacs自体の設定
  - 20
  パッケージの設定
-
-## TODO
-
- - autocompleteからcompanyに移行する
- - rtagの導入
- - migemo導入
