@@ -3,10 +3,6 @@
 
 (setq ivy-use-virtual-buffers t)
 (setq ivy-height 20)
-(setq counsel-git-grep-skip-counting-lines t)
-(setq ivy-re-builders-alist
-      '((swiper . regexp-quote)
-        (t      . ivy--regex-fuzzy)))
 
 ;; C-x bだけでなくC-x C-bでもバッファ変更できるようにする
 (global-set-key (kbd "C-x C-b") 'ivy-switch-buffer)
