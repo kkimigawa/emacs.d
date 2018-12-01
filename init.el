@@ -10,6 +10,7 @@
     company-c-headers
     counsel
     csharp-mode
+    docker
     dockerfile-mode
     dumb-jump
     git-gutter
