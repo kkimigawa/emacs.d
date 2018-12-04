@@ -20,6 +20,7 @@
     lua-mode
     magit
     markdown-mode
+    omnisharp
     swiper
     typescript-mode
     web-mode
