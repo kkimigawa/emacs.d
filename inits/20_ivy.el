@@ -17,3 +17,6 @@
 (when (executable-find "rg")
   (global-set-key (kbd "C-c g") 'counsel-rg)
   )
+
+;; counsel-M-xで「^」が入力された状態になっているので空の状態にする
+(setq ivy-initial-inputs-alist nil)
