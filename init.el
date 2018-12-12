@@ -13,6 +13,7 @@
     docker
     dockerfile-mode
     dumb-jump
+    exec-path-from-shell
     git-gutter
     google-c-style
     init-loader
