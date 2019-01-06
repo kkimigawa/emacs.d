@@ -18,6 +18,7 @@
     google-c-style
     init-loader
     ivy
+    kotlin-mode
     lua-mode
     magit
     markdown-mode
