@@ -4,10 +4,6 @@
 ;; C-c lで指定行ジャンプ
 (define-key mode-specific-map "l" 'goto-line)
 
-;; Home、EndをC-a、C-eと同じ動きにする
-(global-set-key [home] 'move-beginning-of-line)
-(global-set-key [end] 'move-end-of-line)
-
 ;; 起動時の画面を読み込まない
 (setq inhibit-startup-message t)
 
@@ -24,6 +20,7 @@
 (line-number-mode t)
 ;; 列の表示
 (column-number-mode t)
+
 ;; ミニバッファを縦に広げない
 (setq-default resize-mini-windows nil)
 
