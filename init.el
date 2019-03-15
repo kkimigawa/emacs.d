@@ -22,6 +22,7 @@
     lua-mode
     magit
     markdown-mode
+    neotree
     omnisharp
     swiper
     symbol-overlay
