@@ -24,9 +24,11 @@
     markdown-mode
     omnisharp
     swiper
+    symbol-overlay
     typescript-mode
     web-mode
     wgrep
+    whitespace
     yaml-mode
     ))
 
