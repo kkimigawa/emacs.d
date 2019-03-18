@@ -8,8 +8,8 @@
 (global-set-key (kbd "C-x C-b") 'ivy-switch-buffer)
 
 (global-set-key (kbd "C-r") 'counsel-recentf)
-(global-set-key (kbd "C-s") 'swiper)
 
+(global-set-key (kbd "C-c s") 'swiper)
 (global-set-key (kbd "C-c i") 'counsel-imenu)
 (global-set-key (kbd "C-c f") 'counsel-git)
 (global-set-key (kbd "C-c g") 'counsel-git-grep)
