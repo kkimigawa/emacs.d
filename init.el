@@ -10,6 +10,7 @@
     company-c-headers
     counsel
     csharp-mode
+    csv-mode
     docker
     dockerfile-mode
     dumb-jump
