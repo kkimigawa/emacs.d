@@ -16,6 +16,13 @@
   (interactive)
   (setq-local eww-disable-colorize nil))
 
+;; 画像を非表示
+(defun shr-put-image-alt (spec alt &optional flags)
+  (insert alt))
+(defun eww-mode-hook--disable-image ()
+  (setq-local shr-put-image-function 'shr-put-image-alt))
+(add-hook 'eww-mode-hook 'eww-mode-hook--disable-image)
+
 (setq eww-search-prefix "http://www.google.co.jp/search?q=")
 
 (define-key eww-mode-map "p" '(lambda () "" (interactive) (scroll-down 1)))
