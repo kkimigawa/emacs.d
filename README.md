@@ -1,19 +1,53 @@
-Emacs用の設定ファイル
+Emacs setting files
 ===================
 
-## 動作確認バージョン
+# Usage
 
-Emacs 25.x
-Emacs 26.x
+```bash
+$ cd ~/
+$ git clone https://github.com/kkimigawa/emacs.d.git .emacs.d
+$ emacs
+```
 
-## init-loader
 
-設定ファイルを管理するためにinit-loaderを導入
-番号は以下のように管理
+# Use packages
 
- - 00
- どんな設定よりも先に設定する項目
- - 10
- Emacs自体の設定
- - 20
- パッケージの設定
+* company
+* company-c-headers
+* counsel
+* csharp-mode
+* csv-mode
+* docker
+* dockerfile-mode
+* dumb-jump
+* exec-path-from-shell
+* git-gutter
+* google-c-style
+* init-loader
+* ivy
+* kotlin-mode
+* lua-mode
+* magit
+* markdown-mode
+* neotree
+* omnisharp
+* swiper
+* symbol-overlay
+* typescript-mode
+* web-mode
+* wgrep
+* whitespace
+* yaml-mode
+
+
+# Platform
+
+## Windows
+
+Windows (GNU Emacs + IME patch)  
+http://cha.la.coocan.jp/doc/NTEmacs.htm
+
+## Mac
+
+Emacs for Mac OSX
+https://emacsformacosx.com/
