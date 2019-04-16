@@ -39,10 +39,8 @@
 ;; 対応するカッコをハイライト表示する
 (show-paren-mode t)
 
-;; 補完時に大文字小文字を区別しない
-(setq completion-ignore-case t)
-;; Linux用
-(custom-set-variables '(read-file-name-completion-ignore-case t))
+;; 補完時に大文字小文字を区別する
+(setq completion-ignore-case nil)
 
 ;; 同名のファイルを開いたとき親ディレクトリを表示する
 (require 'uniquify)
