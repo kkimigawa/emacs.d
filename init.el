@@ -17,6 +17,7 @@
     exec-path-from-shell
     git-gutter
     google-c-style
+    google-this
     init-loader
     ivy
     kotlin-mode
