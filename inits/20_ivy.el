@@ -4,6 +4,9 @@
 (setq ivy-use-virtual-buffers t)
 (setq ivy-height 20)
 
+;; C-kでバッファを閉じる
+(define-key ivy-switch-buffer-map (kbd "C-k") 'ivy-switch-buffer-kill)
+
 ;; C-x bだけでなくC-x C-bでもバッファ変更できるようにする
 (global-set-key (kbd "C-x C-b") 'ivy-switch-buffer)
 
