@@ -11,6 +11,7 @@
     counsel
     csharp-mode
     csv-mode
+    dired-single
     docker
     dockerfile-mode
     dumb-jump
