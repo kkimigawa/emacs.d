@@ -10,7 +10,7 @@
 ;; C-x bだけでなくC-x C-bでもバッファ変更できるようにする
 (global-set-key (kbd "C-x C-b") 'ivy-switch-buffer)
 
-(global-set-key (kbd "C-c s") 'swiper)
+(global-set-key (kbd "C-c s") 'swiper-thing-at-point)
 (global-set-key (kbd "C-c i") 'counsel-imenu)
 (global-set-key (kbd "C-c f") 'counsel-git)
 (global-set-key (kbd "C-c g") 'counsel-git-grep)
