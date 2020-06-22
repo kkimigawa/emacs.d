@@ -10,7 +10,6 @@
     company-c-headers
     counsel
     csharp-mode
-    csv-mode
     dired-single
     docker
     dockerfile-mode
