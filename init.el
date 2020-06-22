@@ -24,6 +24,7 @@
     magit
     markdown-mode
     omnisharp
+    rust-mode
     swiper
     symbol-overlay
     typescript-mode
