@@ -7,7 +7,6 @@
 (defvar installing-package-list
   '(
     company
-    company-c-headers
     counsel
     csharp-mode
     dired-single
