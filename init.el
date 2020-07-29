@@ -24,6 +24,7 @@
     markdown-mode
     omnisharp
     rust-mode
+    smex
     swiper
     symbol-overlay
     typescript-mode
