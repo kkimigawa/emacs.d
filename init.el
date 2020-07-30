@@ -17,6 +17,7 @@
     git-gutter
     google-c-style
     google-this
+    groovy-mode
     init-loader
     ivy
     kotlin-mode
