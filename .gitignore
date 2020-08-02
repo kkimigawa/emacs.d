@@ -2,9 +2,12 @@ auto-save-list/
 elpa/
 eshell/
 server/
+transient/
 url/
-recentf
-tramp
+
+.#*
 ac-comphist.dat
 projectile*
-.#*
+recentf
+smex-items
+tramp
