@@ -1,4 +1,5 @@
 (require 'magit)
+(require 'magit-lfs)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 

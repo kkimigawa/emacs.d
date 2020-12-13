@@ -21,6 +21,7 @@
     ivy
     kotlin-mode
     magit
+    magit-lfs
     markdown-mode
     omnisharp
     rust-mode
