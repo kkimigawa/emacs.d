@@ -12,6 +12,15 @@
 ;; コミット時に変更点を表示しない(変更点が多いと重くなる)
 (remove-hook 'server-switch-hook 'magit-commit-diff)
 
+;; magit-statusを高速化
+;; https://jakemccrary.com/blog/2020/11/14/speeding-up-magit/
+(remove-hook 'magit-status-sections-hook 'magit-insert-tags-header)
+(remove-hook 'magit-status-sections-hook 'magit-insert-status-headers)
+(remove-hook 'magit-status-sections-hook 'magit-insert-unpushed-to-pushremote)
+;(remove-hook 'magit-status-sections-hook 'magit-insert-unpulled-from-pushremote)
+;(remove-hook 'magit-status-sections-hook 'magit-insert-unpulled-from-upstream)
+(remove-hook 'magit-status-sections-hook 'magit-insert-unpushed-to-upstream-or-recent)
+
 ;; 同じウインドウでmagitを開く
 (setq magit-display-buffer-function
       (lambda (buffer)
