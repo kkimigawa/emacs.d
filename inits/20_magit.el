@@ -38,9 +38,3 @@
                 nil)
                (t
                 '(display-buffer-same-window))))))
-
-;; ログの日時をYYYY-mm-dd HH:MM:SSで表示する
-(eval-after-load "magit-log"
-  '(progn
-     (custom-set-variables
-      '(magit-log-margin '(t "%Y-%m-%d %H:%M:%S" magit-log-margin-width t 18)))))
