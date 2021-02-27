@@ -43,6 +43,9 @@
     (dolist (pkg not-installed)
       (package-install pkg))))
 
+;; C-h置き換え
+;; init.elに書かないとうまく動作しなかったのでここで定義
+(define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
 (require 'init-loader)
 (setq init-loader-show-log-after-init nil)
