@@ -9,6 +9,7 @@
     company
     counsel
     csharp-mode
+    dart-mode
     dired-single
     docker
     dockerfile-mode
