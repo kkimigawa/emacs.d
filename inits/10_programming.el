@@ -8,4 +8,5 @@
           (lambda ()
             (c-set-style "k&r")
             (setq c-basic-offset 4)
+            (c-set-offset 'case-label '+)
             (c-set-offset 'statement-cont 'c-lineup-math)))
