@@ -1,5 +1,6 @@
 auto-save-list/
 elpa/
+elpy/
 eshell/
 server/
 transient/
@@ -11,3 +12,4 @@ projectile*
 recentf*
 smex-items
 tramp
+network-security.data
