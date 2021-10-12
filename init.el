@@ -15,7 +15,6 @@
     dockerfile-mode
     dumb-jump
     git-gutter
-    google-this
     groovy-mode
     highlight-indent-guides
     init-loader
