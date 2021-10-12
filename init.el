@@ -13,7 +13,6 @@
     dired-single
     docker
     dockerfile-mode
-    dumb-jump
     git-gutter
     groovy-mode
     highlight-indent-guides
