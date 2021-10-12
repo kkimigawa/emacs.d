@@ -17,6 +17,7 @@
     git-gutter
     google-this
     groovy-mode
+    highlight-indent-guides
     init-loader
     ivy
     kotlin-mode
