@@ -29,7 +29,6 @@
     typescript-mode
     web-mode
     wgrep
-    whitespace
     yaml-mode
     ))
 
