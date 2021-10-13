@@ -100,3 +100,6 @@
 
 ;; vc-modeを無効にする
 (setq vc-handled-backends nil)
+
+;; 右から左に読む言語に対応させないことで描画高速化
+(setq-default bidi-display-reordering nil)
