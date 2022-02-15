@@ -22,6 +22,7 @@
     magit-lfs
     markdown-mode
     omnisharp
+    python-insert-docstring
     rust-mode
     smex
     swiper
