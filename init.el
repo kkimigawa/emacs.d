@@ -8,11 +8,8 @@
   '(
     company
     counsel
-    csharp-mode
     dart-mode
     dired-single
-    docker
-    dockerfile-mode
     git-gutter
     groovy-mode
     init-loader
@@ -21,7 +18,6 @@
     magit
     magit-lfs
     markdown-mode
-    omnisharp
     python-insert-docstring
     rust-mode
     smex
