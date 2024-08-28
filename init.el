@@ -147,30 +147,33 @@
 (leaf company
   :emacs>= 25.1
   :ensure t
-  :config
-  (global-company-mode +1)
-  ;; 自動補完オフ
-  (custom-set-variables '(company-idle-delay nil))
-  ;; 先頭位置以外のTABキーで補完
+  :preface
   (defun my-company-complete ()
     (interactive)
     (if (equal (current-column) 0)
 	(indent-for-tab-command)
       (company-complete)))
-  (global-set-key (kbd "TAB") 'my-company-complete))
+  :bind
+  ;; 先頭位置以外のTABキーで補完
+  (("TAB" . my-company-complete))
+  :config
+  (global-company-mode +1)
+  ;; 自動補完オフ
+  (custom-set-variables '(company-idle-delay nil)))
 
 (leaf magit
   :emacs>= 26.1
   :ensure t
+  :preface
+  (defun magit-display-buffer-same-window (buffer)
+    "Display BUFFER in the selected window like God intended."
+    (display-buffer
+     buffer '(display-buffer-same-window)))
   :config
   ;; コミット時に変更点を表示しない(変更点が多いと重くなる)
   (remove-hook 'server-switch-hook 'magit-commit-diff)
   ;; 同じウインドウでmagitを開く
   ;; https://idiomdrottning.org/magit-transients
-  (defun magit-display-buffer-same-window (buffer)
-    "Display BUFFER in the selected window like God intended."
-    (display-buffer
-     buffer '(display-buffer-same-window)))
   (setq magit-display-buffer-function 'magit-display-buffer-same-window)
   (setq magit-popup-display-buffer-action '((display-buffer-same-window)))
   :after compat git-commit magit-section with-editor)
