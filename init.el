@@ -70,12 +70,23 @@
   (setq make-backup-files nil)
   (setq auto-save-default nil)
   (setq auto-save-list-file-prefix nil)
-  (setq create-lockfiles nil)
+  (setq create-lockfiles nil))
+
+(leaf common-key-binding
   :bind
-  (("C-h" . delete-backward-char)
-   ("M-h" . backward-kill-word)
-   ("M-n" . (lambda () (interactive) (scroll-up 1)))
-   ("M-p" . (lambda () (interactive) (scroll-down 1)))))
+  (("C-h"     . delete-backward-char)
+   ("M-h"     . backward-kill-word)
+   ("M-n"     . (lambda () (interactive) (scroll-up 1)))
+   ("M-p"     . (lambda () (interactive) (scroll-down 1)))
+   ("C-x b"   . consult-buffer)
+   ("C-x C-b" . consult-buffer)
+   ("C-c s"   . consult-line)
+   ("C-c i"   . consult-imenu)
+   ("C-c l"   . consult-goto-line)
+   ("C-c f"   . consult-ls-git-ls-files)
+   ("C-c r"   . consult-recent-file)
+   ("C-c g"   . consult-git-grep)
+   ("C-c d"   . magit-diff-buffer-file)))
 
 (leaf leaf-convert
   :emacs>= 26.1
@@ -112,15 +123,6 @@
 (leaf consult
   :emacs>= 27.1
   :ensure t
-  :bind
-  (("C-x b"   . consult-buffer)
-   ("C-x C-b" . consult-buffer)
-   ("C-c s"   . consult-line)
-   ("C-c i"   . consult-imenu)
-   ("C-c l"   . consult-goto-line)
-   ("C-c f"   . consult-ls-git-ls-files)
-   ("C-c r"   . consult-recent-file)
-   ("C-c g"   . consult-git-grep))
   :config
   (setq consult-preview-partial-size 0)
   :after compat)
