@@ -70,7 +70,9 @@
   (setq make-backup-files nil)
   (setq auto-save-default nil)
   (setq auto-save-list-file-prefix nil)
-  (setq create-lockfiles nil))
+  (setq create-lockfiles nil)
+  ;; Tabをスペースに変える
+  (setq-default indent-tabs-mode nil))
 
 (leaf common-key-binding
   :preface
