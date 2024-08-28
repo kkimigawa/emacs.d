@@ -122,8 +122,7 @@
    ("C-c r"   . consult-recent-file)
    ("C-c g"   . consult-git-grep))
   :config
-  ;; consultのライブプレビュー重いのでサイズ指定する
-  (setq consult-preview-partial-size 10240)
+  (setq consult-preview-partial-size 0)
   :after compat)
 
 (leaf consult-ls-git
