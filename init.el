@@ -87,7 +87,8 @@
    ("C-c f"   . consult-ls-git-ls-files)
    ("C-c r"   . consult-recent-file)
    ("C-c g"   . consult-git-grep)
-   ("C-c d"   . magit-diff-buffer-file)))
+   ("C-c m l" . magit-log-buffer-file)
+   ("C-c m d" . magit-diff-buffer-file)))
 
 (leaf leaf-convert
   :emacs>= 26.1
