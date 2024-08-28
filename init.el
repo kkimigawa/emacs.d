@@ -71,6 +71,8 @@
   (setq auto-save-default nil)
   (setq auto-save-list-file-prefix nil)
   (setq create-lockfiles nil)
+  ;; 末尾のスペースやタブを可視化
+  (setq-default show-trailing-whitespace t)
   ;; Tabをスペースに変える
   (setq-default indent-tabs-mode nil))
 
