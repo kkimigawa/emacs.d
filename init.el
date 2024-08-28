@@ -78,6 +78,7 @@
    ("M-h"     . backward-kill-word)
    ("M-n"     . (lambda () (interactive) (scroll-up 1)))
    ("M-p"     . (lambda () (interactive) (scroll-down 1)))
+   ("C-x g"   . magit-status-quick)
    ("C-x b"   . consult-buffer)
    ("C-x C-b" . consult-buffer)
    ("C-c s"   . consult-line)
