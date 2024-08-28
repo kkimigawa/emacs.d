@@ -31,6 +31,8 @@
   :init
   ;; 起動時の画面を読み込まない
   (setq inhibit-startup-message t)
+  ;; scrathのデフォルトメッセージを消す
+  (setq initial-scratch-message nil)
   ;; テーマ
   (load-theme 'wombat t)
   ;; メニューバーを消す
