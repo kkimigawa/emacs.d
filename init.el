@@ -97,7 +97,7 @@
    ("C-c f"   . consult-ls-git-ls-files)
    ("C-c r"   . consult-recent-file)
    ("C-c g"   . consult-git-grep)
-   ("C-c m b" . magit-blame)
+   ("C-c m b" . magit-blame-addition)
    ("C-c m l" . magit-log-buffer-file)
    ("C-c m d" . magit-diff-buffer-file)))
 
