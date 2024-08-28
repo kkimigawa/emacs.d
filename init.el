@@ -73,6 +73,10 @@
   (setq create-lockfiles nil))
 
 (leaf common-key-binding
+  :preface
+  (defun consult-line-symbol-at-point ()
+    (interactive)
+    (consult-line (thing-at-point 'symbol)))
   :bind
   (("C-h"     . delete-backward-char)
    ("M-h"     . backward-kill-word)
@@ -81,7 +85,7 @@
    ("C-x g"   . magit-status-quick)
    ("C-x b"   . consult-buffer)
    ("C-x C-b" . consult-buffer)
-   ("C-c s"   . consult-line)
+   ("C-c s"   . consult-line-symbol-at-point)
    ("C-c i"   . consult-imenu)
    ("C-c l"   . consult-goto-line)
    ("C-c f"   . consult-ls-git-ls-files)
