@@ -175,11 +175,14 @@
     "Display BUFFER in the selected window like God intended."
     (display-buffer
      buffer '(display-buffer-same-window)))
+  :hook
+  ;; コミット時に変更点を表示しない
+  (magit-mode-hook . (lambda ()
+                       (remove-hook 'server-switch-hook 'magit-commit-diff)
+                       (remove-hook 'with-editor-filter-visit-hook 'magit-commit-diff)))
   :config
   ;; 保存してないバッファがある場合に確認しない
   (setq magit-save-repository-buffers nil)
-  ;; コミット時に変更点を表示しない(変更点が多いと重くなる)
-  (remove-hook 'server-switch-hook 'magit-commit-diff)
   ;; 同じウインドウでmagitを開く
   ;; https://idiomdrottning.org/magit-transients
   (setq magit-display-buffer-function 'magit-display-buffer-same-window)
