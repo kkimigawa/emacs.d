@@ -176,6 +176,8 @@
     (display-buffer
      buffer '(display-buffer-same-window)))
   :config
+  ;; 保存してないバッファがある場合に確認しない
+  (setq magit-save-repository-buffers nil)
   ;; コミット時に変更点を表示しない(変更点が多いと重くなる)
   (remove-hook 'server-switch-hook 'magit-commit-diff)
   ;; 同じウインドウでmagitを開く
