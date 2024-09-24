@@ -41,10 +41,12 @@
   (line-number-mode t)
   ;; 列の表示
   (column-number-mode t)
-  ;; ツールバーを消す
-  (tool-bar-mode 0)
-  ;; スクロールバーを非表示
-  (scroll-bar-mode 0)
+  (if (display-graphic-p)
+      (progn
+        ;; ツールバーを消す
+        (tool-bar-mode 0)
+        ;; スクロールバーを非表示
+        (scroll-bar-mode 0)))
   ;; モードラインからモード名を削除
   (delete 'mode-line-modes mode-line-format)
   ;; 文字コードはutf-8を優先させる
